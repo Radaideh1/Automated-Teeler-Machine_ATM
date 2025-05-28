@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 
 using std::endl;
 using std::cout;
@@ -16,7 +16,7 @@ struct Beneficiary {
 	std::string User_Phone_Number;
 	std::string User_Email;
 	double User_Monthly_Salary_amount;
-	double User_Current_Balance;
+	double User_Current_Balance;// مقدار المال الحالي
 	int password;
 
 };
@@ -25,3 +25,11 @@ struct Beneficiary {
 void Check_ID(int check_ID, int User_ID);
 
 bool Check_Password(int check_Password, int User_Password);
+
+void Interface();
+
+
+// Sarves 
+void Withdrawal(double &Current_Balance);
+
+void Balance_Inquiry(int Current_Balance);
