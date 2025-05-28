@@ -1,3 +1,3 @@
 ﻿  Main.cpp
-C:\Users\LENOVO\Desktop\C\Special Projects\Automated Teller Machine-ATM-\Main.cpp(56,28): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\LENOVO\Desktop\C\Special Projects\Automated Teller Machine-ATM-\Main.cpp(66,28): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Automated Teller Machine-ATM-.vcxproj -> C:\Users\LENOVO\Desktop\C\Special Projects\Automated Teller Machine-ATM-\x64\Debug\Automated Teller Machine-ATM-.exe

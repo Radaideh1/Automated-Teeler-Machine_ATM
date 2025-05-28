@@ -21,15 +21,23 @@ struct Beneficiary {
 
 };
 
-
+//  ## Check ##
 void Check_ID(int check_ID, int User_ID);
 
 bool Check_Password(int check_Password, int User_Password);
 
+
+// ## InterFace ##
 void Interface();
 
 
-// Sarves 
+// ## Servase ##
+
+// 1.Withfrawal
 void Withdrawal(double &Current_Balance);
 
+// 2.Deposit '
+void Deposit(double& Current_Balance);
+
+// 3.Balance Inquiry
 void Balance_Inquiry(int Current_Balance);

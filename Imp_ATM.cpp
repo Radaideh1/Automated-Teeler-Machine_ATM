@@ -30,7 +30,6 @@ void Interface() {
 }
 
 
-
 // ## Servase ##
 
 // 1.Withfrawal
@@ -43,6 +42,15 @@ void Withdrawal(double &Current_Balance){
 		cout << endl;
 	}
 	Current_Balance -= AmoToBeWith;
+}
+
+// 2.Deposit 
+void Deposit(double& Current_Balance) {
+	double AmoToDepo;
+	cout << "Amount to be Deposited : "; cin >> AmoToDepo;
+	Current_Balance += AmoToDepo;
+
+
 }
 
 
