@@ -24,9 +24,9 @@ struct Beneficiary {
 int findUser(Beneficiary User[], int size, int check_ID);
 
 //  ## Check ##
-void Check_ID(int check_ID, int el, Beneficiary User[]);
+void Check_ID(Beneficiary User[], int check_ID, int U);
 
-bool Check_Password(int check_Password, int User_Password);
+bool Check_Password(int check_Password, Beneficiary User[], int U);
 
 
 // ## InterFace ##

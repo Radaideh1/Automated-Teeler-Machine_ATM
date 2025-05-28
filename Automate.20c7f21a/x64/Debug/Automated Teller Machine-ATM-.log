@@ -1,7 +1,5 @@
-﻿  Imp_ATM.cpp
-  Main.cpp
+﻿  Main.cpp
 C:\Users\LENOVO\Desktop\C\Special Projects\Automated Teller Machine-ATM-\Main.cpp(37,36): warning C4305: '=': truncation from '__int64' to 'int'
 C:\Users\LENOVO\Desktop\C\Special Projects\Automated Teller Machine-ATM-\Main.cpp(37,36): warning C4309: '=': truncation of constant value
-C:\Users\LENOVO\Desktop\C\Special Projects\Automated Teller Machine-ATM-\Main.cpp(56,6): warning C4101: 'check_Password': unreferenced local variable
-  Generating Code...
+C:\Users\LENOVO\Desktop\C\Special Projects\Automated Teller Machine-ATM-\Main.cpp(90,28): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Automated Teller Machine-ATM-.vcxproj -> C:\Users\LENOVO\Desktop\C\Special Projects\Automated Teller Machine-ATM-\x64\Debug\Automated Teller Machine-ATM-.exe

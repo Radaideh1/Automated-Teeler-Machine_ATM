@@ -12,15 +12,19 @@ int findUser(Beneficiary User[], int size, int check_ID) {
 }
 
 //  ## Check ##
-void Check_ID(int check_ID, int el, Beneficiary User[]) {
-
+void Check_ID(Beneficiary User[], int check_ID, int U) {
+		
+	while (U == -1) {
+		cout << "we can't find ID plese try again\n";
+		cout << "Enter the ID here : "; cin >> check_ID;
+	}
 
 
 }
 
-bool Check_Password(int check_Password, int User_Password) {
+bool Check_Password(int check_Password, Beneficiary User[], int U) {
 	int Try = 2;
-	while (check_Password != User_Password) {
+	while (check_Password != User[U].password) {
 		cout << "try again : "; cin >> check_Password;
 		Try--;
 		if (Try == 0) { return false;}

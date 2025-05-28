@@ -51,6 +51,7 @@ int main() {
 	User[3].password = 9910;
 	User[3].User_Current_Balance = 250;
 
+	int U;
 	int Try = 3;
 	int check_ID;
 	int check_Password;
@@ -58,45 +59,45 @@ int main() {
 
 	cout << "\t\twellcome\t\t\n\n";
 
-
 	while (User[0].User_Account_Status) {
 
 		cout << "Enter the ID here : "; cin >> check_ID;
-		cout << findUser(User, 4, check_ID);
+		U = findUser(User, 4, check_ID);
+		Check_ID(User, check_ID, U);
 
-		//cout << "Entre the password : "; cin >> check_Password;
-		//User[0].User_Account_Status = Check_Password(check_Password, User[0].password);
-		//if (User[0].User_Account_Status == false) 
-		//	continue;
+		cout << "Entre the password : "; cin >> check_Password;
+		User[U].User_Account_Status = Check_Password(check_Password, User,U);
+		if (User[U].User_Account_Status == false) 
+			continue;
 
-		//bool ser = true;
-		//while (ser) {
+		bool ser = true;
+		while (ser) {
 
-		//	Interface();
+			Interface();
 
-		//	int q;
-		//	cin >> q;
-		//	switch (q) {
-		//	case 1: {
-		//		Withdrawal(User[0].User_Current_Balance);
-		//		break;
-		//	}
-		//	case 2: {
-		//		Deposit(User[0].User_Current_Balance);
-		//		break;
-		//	}
-		//	case 3: {
-		//		Balance_Inquiry(User[0].User_Current_Balance);
-		//		break;
-		//	}
-		//	case 4: {
-		//		ser = false;
-		//		continue;
-		//	}
+			int q;
+			cin >> q;
+			switch (q) {
+			case 1: {
+				Withdrawal(User[U].User_Current_Balance);
+				break;
+			}
+			case 2: {
+				Deposit(User[U].User_Current_Balance);
+				break;
+			}
+			case 3: {
+				Balance_Inquiry(User[U].User_Current_Balance);
+				break;
+			}
+			case 4: {
+				ser = false;
+				continue;
+			}
 
-		//	}// for main switch 
+			}// for main switch 
 
-		//}
+		}
 		
 
 
