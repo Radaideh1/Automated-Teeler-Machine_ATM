@@ -12,9 +12,6 @@ int main() {
 	User[0].User_Account_Status = true;
 	User[0].User_Name_First_Name = "Abdullah";
 	User[0].User_Name_Last_Name = "Radaideh";
-	User[0].User_National_ID_Number = 2000999346;
-	User[0].User_Gender = 'M';
-	User[0].User_Phone_Number = "0782905422";
 	User[0].password = 3070;
 	User[0].User_Current_Balance = 10000;
 
@@ -23,9 +20,6 @@ int main() {
 	User[1].User_Account_Status = true;
 	User[1].User_Name_First_Name = "Maha";
 	User[1].User_Name_Last_Name = "Radaideh";
-	User[1].User_National_ID_Number = 2000999553;
-	User[1].User_Gender = 'F';
-	User[1].User_Phone_Number = "0779922123";
 	User[1].password = 8661;
 	User[1].User_Current_Balance = 5071;
 
@@ -34,22 +28,16 @@ int main() {
 	User[2].User_Account_Status = true;
 	User[2].User_Name_First_Name = "Lama";
 	User[2].User_Name_Last_Name = "Radaideh";
-	User[2].User_National_ID_Number = 28889123553;
-	User[2].User_Gender = 'F';
-	User[2].User_Phone_Number = "0786423123";
 	User[2].password = 1961;
-	User[2].User_Current_Balance = 100;
+	User[2].User_Current_Balance = 3123;
 
 	// Lina
 	User[3].User_ID = 4444;
 	User[3].User_Account_Status = true;
 	User[3].User_Name_First_Name = "Lina";
 	User[3].User_Name_Last_Name = "Radaideh";
-	User[3].User_National_ID_Number = 2000999553;
-	User[3].User_Gender = 'F';
-	User[3].User_Phone_Number = "0784179331";
 	User[3].password = 9910;
-	User[3].User_Current_Balance = 250;
+	User[3].User_Current_Balance = 2505;
 
 	int U;
 	int Try = 3;
@@ -59,7 +47,7 @@ int main() {
 
 	cout << "\t\twellcome\t\t\n\n";
 
-	while (User[0].User_Account_Status) {
+	while (true) {
 
 		cout << "Enter the ID here : "; cin >> check_ID;
 		U = findUser(User, 4, check_ID);

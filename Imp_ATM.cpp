@@ -2,6 +2,9 @@
 
 
 
+
+//  ## Check ##
+
 int findUser(Beneficiary User[], int size, int check_ID) {
 	for (int i = 0; i < size; i++) {
 		if (check_ID == User[i].User_ID)
@@ -11,15 +14,12 @@ int findUser(Beneficiary User[], int size, int check_ID) {
 
 }
 
-//  ## Check ##
 void Check_ID(Beneficiary User[], int check_ID, int U) {
 		
 	while (U == -1) {
 		cout << "we can't find ID plese try again\n";
 		cout << "Enter the ID here : "; cin >> check_ID;
 	}
-
-
 }
 
 bool Check_Password(int check_Password, Beneficiary User[], int U) {
@@ -65,9 +65,8 @@ void Deposit(double& Current_Balance) {
 
 }
 
-
 // 3.Balance Inquiry
 void Balance_Inquiry(int Current_Balance) {
-	cout << Current_Balance << endl;
+	cout << "Available in the Account : " << Current_Balance << "$" << endl;
 	cout << endl;
 }
