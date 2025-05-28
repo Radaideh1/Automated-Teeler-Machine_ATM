@@ -14,15 +14,17 @@ struct Beneficiary {
 	int User_National_ID_Number;
 	char User_Gender;
 	std::string User_Phone_Number;
-	std::string User_Email;
 	double User_Monthly_Salary_amount;
 	double User_Current_Balance;// مقدار المال الحالي
 	int password;
 
 };
 
+// find 
+int findUser(Beneficiary User[], int size, int check_ID);
+
 //  ## Check ##
-void Check_ID(int check_ID, int User_ID);
+void Check_ID(int check_ID, int el, Beneficiary User[]);
 
 bool Check_Password(int check_Password, int User_Password);
 

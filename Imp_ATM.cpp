@@ -2,12 +2,20 @@
 
 
 
+int findUser(Beneficiary User[], int size, int check_ID) {
+	for (int i = 0; i < size; i++) {
+		if (check_ID == User[i].User_ID)
+			return i;
+	}
+	return -1;
+
+}
+
 //  ## Check ##
-void Check_ID(int check_ID, int User_ID) {
-	while (check_ID != User_ID) {
-		cout << "we can find this ID plese try again !! " << endl;
-		cin >> check_ID;
-	}// if ID
+void Check_ID(int check_ID, int el, Beneficiary User[]) {
+
+
+
 }
 
 bool Check_Password(int check_Password, int User_Password) {
