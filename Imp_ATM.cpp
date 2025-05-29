@@ -14,11 +14,12 @@ int findUser(Beneficiary User[], int size, int check_ID) {
 
 }
 
-void Check_ID(Beneficiary User[], int check_ID, int U) {
-		
+void Check_ID(Beneficiary User[], int check_ID, int& U) {
+
 	while (U == -1) {
 		cout << "we can't find ID plese try again\n";
 		cout << "Enter the ID here : "; cin >> check_ID;
+		 U = findUser(User, 4, check_ID);
 	}
 }
 
@@ -34,8 +35,9 @@ bool Check_Password(int check_Password, Beneficiary User[], int U) {
 
 
 // ## ItroFace ##
-void Interface() {
-	cout << "\n\n=================================\n\n";
+void Interface(Beneficiary User[],int U) {
+	cout << "\n\n=================================\n";
+	cout <<'\t' << User[U].User_Name_First_Name << ' ' << User[U].User_Name_Last_Name << "\n\n";
 	cout << "1.Withdrawal\t\t2.Deposit\n\n3.Balace Inguiry\t4.Exit";
 	cout << "\n\nChose : ";
 
@@ -67,6 +69,6 @@ void Deposit(double& Current_Balance) {
 
 // 3.Balance Inquiry
 void Balance_Inquiry(int Current_Balance) {
-	cout << "Available in the Account : " << Current_Balance << "$" << endl;
-	cout << endl;
+	cout << "\nAvailable in the Account : " << Current_Balance << "$";
+	
 }

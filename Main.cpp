@@ -43,7 +43,7 @@ int main() {
 	int Try = 3;
 	int check_ID;
 	int check_Password;
-
+	
 
 	cout << "\t\twellcome\t\t\n\n";
 
@@ -51,7 +51,13 @@ int main() {
 
 		cout << "Enter the ID here : "; cin >> check_ID;
 		U = findUser(User, 4, check_ID);
+
+
 		Check_ID(User, check_ID, U);
+		if (User[U].User_Account_Status == false) {
+			cout << "your account has Band , plese go to\nband and solve this probrem there !!" << endl;
+			continue;
+		}
 
 		cout << "Entre the password : "; cin >> check_Password;
 		User[U].User_Account_Status = Check_Password(check_Password, User,U);
@@ -61,7 +67,7 @@ int main() {
 		bool ser = true;
 		while (ser) {
 
-			Interface();
+			Interface(User,U);
 
 			int q;
 			cin >> q;
@@ -80,7 +86,8 @@ int main() {
 			}
 			case 4: {
 				ser = false;
-				continue;
+				cout << "\n\n=================================\n\n";
+				break;
 			}
 
 			}// for main switch 

@@ -22,13 +22,13 @@ struct Beneficiary {
 
 int findUser(Beneficiary User[], int size, int check_ID);
 
-void Check_ID(Beneficiary User[], int check_ID, int U);
+void Check_ID(Beneficiary User[], int check_ID, int& U);
 
 bool Check_Password(int check_Password, Beneficiary User[], int U);
 
 
 // ## InterFace ##
-void Interface();
+void Interface(Beneficiary User[], int U);
 
 
 // ## Servase ##
