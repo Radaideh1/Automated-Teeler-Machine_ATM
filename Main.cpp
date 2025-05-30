@@ -12,19 +12,14 @@ int main() {
 	User[3] = { 4444,true,"Lina","Radaideh",2505,5500 };
 	User[4] = { 5555,true,"Ahmad","Omary",9031,450 };
 	
-
-
-	
 	// wellcom
 	cout << "\t\tWellcom\t\t\n\n";
 
 	while (true) {
 
 		cout << "Enter the ID here : "; cin >> portal.check_ID;
-		portal.U = portal.find_User(User, portal);/*findUser(User, size, portal.check_ID);*/
+		portal.U = portal.find_User(User, portal);
 
-
-		/*Check_ID(User, check_ID, U);*/
 		portal.Check_ID(User, portal);
 		if (User[portal.U].User_Account_Status == false) {
 			cout << "your account has Band , plese go to\nband and solve this probrem there !!" << endl;
@@ -33,7 +28,7 @@ int main() {
 
 		cout << "Entre the password : "; cin >> portal.check_Password;
 		User[portal.U].User_Account_Status = portal.Check_Passsword(User, portal);
-		if (User[portal.U].User_Account_Status == false) 
+		if (!User[portal.U].User_Account_Status) 
 			continue;
 
 		bool ser = true;

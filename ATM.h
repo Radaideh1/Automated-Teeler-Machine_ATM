@@ -34,9 +34,6 @@ public:
 
 };
 
-//  ## Check ##
-
-int findUser(Beneficiary User[], int size, int check_ID);
 
 // ## InterFace ##
 

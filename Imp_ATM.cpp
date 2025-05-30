@@ -3,19 +3,8 @@
 
 
 
-//  ## Check ##
-
-int findUser(Beneficiary User[], int size, int check_ID) {
-	for (int i = 0; i < size; i++) {
-		if (check_ID == User[i].User_ID)
-			return i;
-	}
-	return -1;
-
-}
-
-
 // ## function of class ##
+
 int Check::find_User(Beneficiary User[], Check ch) {
 
 	for (int i = 0; i < ch.size; i++) {
@@ -26,8 +15,6 @@ int Check::find_User(Beneficiary User[], Check ch) {
 
 }
 
-
-// size isn't ato
 void Check::Check_ID(Beneficiary User[], Check& ch) {
 
 	while (ch.U == -1) {
@@ -39,7 +26,7 @@ void Check::Check_ID(Beneficiary User[], Check& ch) {
 
 }
 
-bool Check:: Check_Passsword(Beneficiary User[], Check& ch) {
+bool Check::Check_Passsword(Beneficiary User[], Check& ch) {
 	while (ch.check_Password != User[ch.U].password) {
 		cout << "Try again : "; cin >> ch.check_Password;
 		Try--;
