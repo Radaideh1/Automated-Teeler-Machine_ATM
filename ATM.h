@@ -28,9 +28,9 @@ public:
 	int check_ID;
 	int check_Password;
 	// function 
-	int find_User(Beneficiary User[], Check ch);
-	void Check_ID(Beneficiary User[], Check &ch);
-	bool Check_Passsword(Beneficiary User[], Check &ch);
+	int find_User(Beneficiary User[]);
+	void Check_ID(Beneficiary User[]);
+	bool Check_Passsword(Beneficiary User[]);
 
 };
 
@@ -38,7 +38,6 @@ public:
 // ## InterFace ##
 
 void Interface(Beneficiary User[], int U);
-
 
 // ## Servase ##
 

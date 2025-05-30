@@ -5,38 +5,40 @@
 
 // ## function of class ##
 
-int Check::find_User(Beneficiary User[], Check ch) {
+int Check::find_User(Beneficiary User[]) {
 
-	for (int i = 0; i < ch.size; i++) {
-		if (ch.check_ID == User[i].User_ID)
+	for (int i = 0; i < size; i++) {
+		if (check_ID == User[i].User_ID) {
 			return i;
+		}
 	}
 	return -1;
 
 }
 
-void Check::Check_ID(Beneficiary User[], Check& ch) {
-
-	while (ch.U == -1) {
+void Check::Check_ID(Beneficiary User[]) {
+	
+	while (U == -1) {
 		cout << "Sorry We can't find ID plesee try again\n";
-		cout << "Enter the ID here : "; cin >> ch.check_ID;
-		ch.U = ch.find_User(User, ch);/*findUser(User,ch.size,ch.check_ID);*/
+		cout << "Enter the ID here : "; cin >>check_ID;
+		U = find_User(User);
 	}
 
 
 }
 
-bool Check::Check_Passsword(Beneficiary User[], Check& ch) {
-	while (ch.check_Password != User[ch.U].password) {
-		cout << "Try again : "; cin >> ch.check_Password;
+bool Check::Check_Passsword(Beneficiary User[]) {
+	cout << "Entre the password : "; cin >> check_Password;
+	while (check_Password != User[U].password) {
+		cout << "Try again : "; cin >> check_Password;
+		if (Try <= 0) { Try = 2; return false; }
 		Try--;
-		if (Try == 0) { return false; }
 	}
-	return true;
+	Try = 2;
 
 }
 
-// ## ItroFace ##
+// ## Itrer Face ##
 
 void Interface(Beneficiary User[],int U) {
 	cout << "\n\n=================================\n";
