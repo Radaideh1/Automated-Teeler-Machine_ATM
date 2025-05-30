@@ -2,7 +2,7 @@
 
 int main() {
 	Check portal;
-	const int size = 5;
+	const int size = 6;
 	portal.size = size;
 	Beneficiary User[size];
 	// Data 
@@ -11,6 +11,7 @@ int main() {
 	User[2] = { 3333,true,"Lama","Radaideh",1981,3122 };
 	User[3] = { 4444,true,"Lina","Radaideh",2505,5500 };
 	User[4] = { 5555,true,"Ahmad","Omary",9031,450 };
+	User[5] = { 6666,true,"Mohammad","hayal",3131,123321 };
 	
 
 
