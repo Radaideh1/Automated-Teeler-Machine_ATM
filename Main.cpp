@@ -1,7 +1,9 @@
 #include "ATM.h"
 
 int main() {
+	Check portal;
 	const int size = 5;
+	portal.size = size;
 	Beneficiary User[size];
 	// Data 
 	User[0] = { 1111,true,"Abdullah","Radaideh",3070,10000 };
@@ -9,50 +11,49 @@ int main() {
 	User[2] = { 3333,true,"Lama","Radaideh",1981,3122 };
 	User[3] = { 4444,true,"Lina","Radaideh",2505,5500 };
 	User[4] = { 5555,true,"Ahmad","Omary",9031,450 };
-	// var
-	int U;
-	int Try = 3;
-	int check_ID;
-	int check_Password;
+	
+
+
 	
 	// wellcom
 	cout << "\t\tWellcom\t\t\n\n";
 
 	while (true) {
 
-		cout << "Enter the ID here : "; cin >> check_ID;
-		U = findUser(User, size, check_ID);
+		cout << "Enter the ID here : "; cin >> portal.check_ID;
+		portal.U = portal.find_User(User, portal);/*findUser(User, size, portal.check_ID);*/
 
 
-		Check_ID(User, check_ID, U);
-		if (User[U].User_Account_Status == false) {
+		/*Check_ID(User, check_ID, U);*/
+		portal.Check_ID(User, portal);
+		if (User[portal.U].User_Account_Status == false) {
 			cout << "your account has Band , plese go to\nband and solve this probrem there !!" << endl;
 			continue;
 		}
 
-		cout << "Entre the password : "; cin >> check_Password;
-		User[U].User_Account_Status = Check_Password(check_Password, User,U);
-		if (User[U].User_Account_Status == false) 
+		cout << "Entre the password : "; cin >> portal.check_Password;
+		User[portal.U].User_Account_Status = portal.Check_Passsword(User, portal);
+		if (User[portal.U].User_Account_Status == false) 
 			continue;
 
 		bool ser = true;
 		while (ser) {
 
-			Interface(User,U);
+			Interface(User,portal.U);
 
 			int q;
 			cin >> q;
 			switch (q) {
 			case 1: {
-				Withdrawal(User[U].User_Current_Balance);
+				Withdrawal(User[portal.U].User_Current_Balance);
 				break;
 			}
 			case 2: {
-				Deposit(User[U].User_Current_Balance);
+				Deposit(User[portal.U].User_Current_Balance);
 				break;
 			}
 			case 3: {
-				Balance_Inquiry(User[U].User_Current_Balance);
+				Balance_Inquiry(User[portal.U].User_Current_Balance);
 				break;
 			}
 			case 4: {

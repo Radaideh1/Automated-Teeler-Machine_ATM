@@ -14,25 +14,40 @@ int findUser(Beneficiary User[], int size, int check_ID) {
 
 }
 
-void Check_ID(Beneficiary User[], int check_ID, int& U) {
 
-	while (U == -1) {
-		cout << "we can't find ID plese try again\n";
-		cout << "Enter the ID here : "; cin >> check_ID;
-		 U = findUser(User, 4, check_ID);
+// ## function of class ##
+int Check::find_User(Beneficiary User[], Check ch) {
+
+	for (int i = 0; i < ch.size; i++) {
+		if (ch.check_ID == User[i].User_ID)
+			return i;
 	}
+	return -1;
+
 }
 
-bool Check_Password(int check_Password, Beneficiary User[], int U) {
-	int Try = 2;
-	while (check_Password != User[U].password) {
-		cout << "try again : "; cin >> check_Password;
+
+// size isn't ato
+void Check::Check_ID(Beneficiary User[], Check& ch) {
+
+	while (ch.U == -1) {
+		cout << "Sorry We can't find ID plesee try again\n";
+		cout << "Enter the ID here : "; cin >> ch.check_ID;
+		ch.U = ch.find_User(User, ch);/*findUser(User,ch.size,ch.check_ID);*/
+	}
+
+
+}
+
+bool Check:: Check_Passsword(Beneficiary User[], Check& ch) {
+	while (ch.check_Password != User[ch.U].password) {
+		cout << "Try again : "; cin >> ch.check_Password;
 		Try--;
-		if (Try == 0) { return false;}
-	}// if Password
+		if (Try == 0) { return false; }
+	}
 	return true;
-}
 
+}
 
 // ## ItroFace ##
 

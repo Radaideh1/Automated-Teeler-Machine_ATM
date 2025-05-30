@@ -17,26 +17,26 @@ struct Beneficiary {
 
 };
 
-
 class Check {
-	int U;
-	int Try;
+	// privat val
+	int Try = 2;
 	
 public:
+	// public val
+	int U;
+	int size;
 	int check_ID;
 	int check_Password;
-
+	// function 
+	int find_User(Beneficiary User[], Check ch);
+	void Check_ID(Beneficiary User[], Check &ch);
+	bool Check_Passsword(Beneficiary User[], Check &ch);
 
 };
 
 //  ## Check ##
 
 int findUser(Beneficiary User[], int size, int check_ID);
-
-void Check_ID(Beneficiary User[], int check_ID, int& U);
-
-bool Check_Password(int check_Password, Beneficiary User[], int U);
-
 
 // ## InterFace ##
 
