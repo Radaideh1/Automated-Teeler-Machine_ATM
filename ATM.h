@@ -5,18 +5,29 @@ using std::cout;
 using std::cin;
 
 
-
+// buld Data!!
 struct Beneficiary {
 	int User_ID;
 	bool User_Account_Status;
 	std::string User_Name_First_Name;
 	std::string User_Name_Last_Name;
-	double User_Monthly_Salary_amount;
-	double User_Current_Balance;// مقدار المال الحالي
 	int password;
+	double User_Current_Balance;// مقدار المال الحالي
+	double User_Monthly_Salary_amount;
 
 };
 
+
+class Check {
+	int U;
+	int Try;
+	
+public:
+	int check_ID;
+	int check_Password;
+
+
+};
 
 //  ## Check ##
 
@@ -28,16 +39,14 @@ bool Check_Password(int check_Password, Beneficiary User[], int U);
 
 
 // ## InterFace ##
+
 void Interface(Beneficiary User[], int U);
 
 
 // ## Servase ##
 
-// 1.Withfrawal
 void Withdrawal(double &Current_Balance);
 
-// 2.Deposit '
 void Deposit(double& Current_Balance);
 
-// 3.Balance Inquiry
 void Balance_Inquiry(int Current_Balance);
